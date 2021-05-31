@@ -25,6 +25,7 @@ a {
   font-size: 1.2em;
   transition: 0.7s ease;
   font-weight: 700;
+  color: #fff;
 }
 
 a:hover {

@@ -8,7 +8,7 @@ import { Nav } from 'react-bootstrap';
 
 const BlogAdmin = (props) => {
   const [title, setTitle] = useState('');
-  const [date, setDate] = useState(new Date().toLocaleString() + ' PST');
+  const [date, setDate] = useState('');
 
   const [body, setBody] = useState('');
   const [postId, setPostId] = useState('');
@@ -45,13 +45,13 @@ const BlogAdmin = (props) => {
       // setNewId(fresca);
       setDate(new Date().toLocaleString() + ' PST');
       let newPost = { title, date, body };
+      console.log(date);
       props.onSubmit(newPost);
 
       setTitle('');
       setBody('');
       setComposeTitle('Compose a post:');
       props.getPosts();
-
       //Submit on Edit
     } else {
       console.log(e);

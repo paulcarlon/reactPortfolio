@@ -4,8 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navigation from './components/Navigation.js';
 import Container from 'react-bootstrap/Container';
-
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Alert from 'react-bootstrap/Alert';
+import Nav from 'react-bootstrap/Nav';
+import { LinkContainer } from 'react-router-bootstrap';
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import Freelance from './components/Portfolio/Freelance/Freelance';
 import Portrait from './components/Portfolio/Portrait/Portrait';
 import Blog from './components/Blog/Blog';
@@ -19,6 +21,7 @@ const App = () => {
   // const [users, setUsers] = useState([]);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [searchInput, setSearchInput] = useState('');
 
   useEffect(() => {
     const getPosts = async () => {
@@ -29,7 +32,7 @@ const App = () => {
     getPosts();
   }, []);
 
-  const apiEndpoint = 'http://localhost:8000/posts';
+  const apiEndpoint = 'http://localhost:5000/api/posts/';
 
   const getPosts = async () => {
     const apiPosts = await fetchPosts();
@@ -54,6 +57,8 @@ const App = () => {
     });
 
     setPosts(posts.filter((post) => post.id !== id));
+
+    getPosts();
   };
 
   //Add post
@@ -89,19 +94,38 @@ const App = () => {
   const onSubmit = async (post) => {
     addNewPost(post);
     setPosts([...posts, post]);
+    console.log(posts);
   };
 
-  const fourOhFour = (username) => {
-    const buzzOff =
-      username +
-      ' our DNA test results show you are NOT the father, and more importantly you are not Shannon, so buzz off. Thank you';
-    return <h3>{buzzOff}</h3>;
+  const fourOhFour = (match) => {
+    console.log(match);
+    const buzzOff = `That username and password combination did not match our records.
+      
+      `;
+    return (
+      <div style={{ height: '400px' }}>
+        <h3
+          style={{
+            marginTop: '15%',
+            color: '#333',
+            textShadow: '1px 1px 5px #fff',
+          }}
+        >
+          {buzzOff}
+        </h3>
+        <br />
+        <br />
+        <Link to='/login' style={{ fontSize: '2em', textDecoration: 'none' }}>
+          Try Again
+        </Link>
+      </div>
+    );
   };
 
   return (
     <Router>
       <Container className='text-center'>
-        <Navigation />
+        <Navigation searchInput={searchInput} setSearchInput={setSearchInput} />
         <Switch>
           <Route path='/freelance'>
             <Freelance />

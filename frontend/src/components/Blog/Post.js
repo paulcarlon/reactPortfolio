@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 const Post = (props) => {
+  console.log(props);
   return (
     <Card
       className='border rounded m-4 p-4'
@@ -30,7 +31,7 @@ const Post = (props) => {
             margin: '0 30%',
           }}
         >
-          {props.date}
+          {props.createdAt}
         </Card.Subtitle>
         <Card.Text
           className='mt-4 text-white'

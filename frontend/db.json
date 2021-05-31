@@ -1,16 +1,41 @@
 {
-  "posts": [
-    {
-      "title": "i literally wrote a blog in react",
-      "date": "5/26/2021, 11:02:50 PM",
-      "body": "13yo me would be so proud",
-      "id": 1
+  portrait: [
+{
+      "title": "Barack Obama",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "url": "http://aubrey.digital/sbp/images/Freelance%2001.jpg",
+      
+      "alt": "this is a message for ppl on screen readers"
     },
     {
-      "title": "i hope shannon likes her site",
-      "date": "5/26/2021, 11:33:29 PM PST",
-      "body": "i guess we are going to see!🙈",
-      "id": 2
+      "title": "Joe Biden",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "url": "http://aubrey.digital/sbp/images/Freelance%2002.jpg",
+      "alt": "this is a message for ppl on screen readers",
+    },
+    {
+      "title": "Bernie Sanders",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "url": "http://aubrey.digital/sbp/images/Freelance%2003.jpg",
+      "alt": "this is a message for ppl on screen readers",
+    },
+    {
+      "title": "Carlyn Waters",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "url": "http://aubrey.digital/sbp/images/Freelance%2004.jpg",
+      "alt": "this is a message for ppl on screen readers",
+    },
+    {
+      "title": "Carlyn Waters",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "url": "http://aubrey.digital/sbp/images/Freelance%2005.jpg",
+      "alt": "this is a message for ppl on screen readers",
+    },
+    {
+      "title": "Carlyn Waters",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "url": "http://aubrey.digital/sbp/images/Freelance%2006.jpg",
+      "alt": "this is a message for ppl on screen readers",
     }
   ]
 }

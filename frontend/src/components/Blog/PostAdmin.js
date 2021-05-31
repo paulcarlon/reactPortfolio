@@ -18,7 +18,7 @@ const PostAdmin = (props) => {
         <Button
           variant='danger'
           onClick={() => {
-            props.onDelete(props.id);
+            props.onDelete(props._id);
           }}
         >
           <FaTimes />
@@ -27,9 +27,9 @@ const PostAdmin = (props) => {
           variant='warning'
           onClick={() => {
             props.setTitle(props.title);
-            // props.setDate(props.date);
+            props.setDate(props.date);
             props.setBody(props.body);
-            props.setPostId(props.id);
+            props.setPostId(props._id);
             props.setComposeTitle('Edit post:');
             props.setIsEdit(true);
           }}
@@ -37,7 +37,7 @@ const PostAdmin = (props) => {
           <FaEraser />
         </Button>
         <br />
-        {props.date}
+        {props.createdAt}
       </Card.Title>
       <Card.Body>
         <Card.Text>{props.body}</Card.Text>

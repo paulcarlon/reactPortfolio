@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginButton from './LoginButton';
+import { Container, Row, Col, Form } from 'react-bootstrap';
 
 const LoginForm = ({
   username,
@@ -17,6 +18,7 @@ const LoginForm = ({
       passwordInput.type = 'password';
     }
   };
+
   return (
     <div
       style={{
@@ -33,14 +35,15 @@ const LoginForm = ({
         style={{
           border: '1px solid #fff',
           boxShadow: '5px 5px 20px #333',
-          fontSize: '3em',
+          fontSize: '2.7em',
           textShadow: '1px 1px 5px #333',
-          fontFamily: 'monospace',
+          fontFamily: 'fantasy',
         }}
       >
         Blog
       </h2>
-      <p
+
+      <div
         style={{
           margin: '10px 0',
           color: '#fff',
@@ -50,7 +53,7 @@ const LoginForm = ({
         }}
       >
         Username
-      </p>
+      </div>
       <input
         type='text'
         placeholder='Enter your username'
