@@ -6,11 +6,16 @@
   "type": "module",
   "scripts": {
     "start": "node backend/server",
+    "build": "cd frontend && npm run build",
+    "install-frontend": "cd frontend && npm install",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
   },
+  "engines": {
+    "node": "14.15.3"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/paulcarlon/reactPortfolio.git"
