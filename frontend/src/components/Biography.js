@@ -7,9 +7,9 @@ const Biography = () => {
       <Row>
         <Col className='col-xs-12 mt-5 text-center'>
           <h2
-            className='d-inline text-white order mx-5 p-3 rounded'
+            className='d-inline text-white ordermx-5 p-3 rounded'
             style={{
-              backgroundColor: 'rgba(255,255,255,0.3)',
+              backgroundColor: 'rgba(0,0,0,0.6)',
               border: '1px solid #fff',
               boxShadow: '5px 5px 20px #333',
               fontSize: '3em',
@@ -44,7 +44,10 @@ const Biography = () => {
           >
             Documenting life one image at a time.
           </blockquote>
-          <p style={{ fontSize: '1em' }} className=' mt-5 px-5'>
+          <p
+            style={{ fontSize: '1em', textShadow: '2px 2px 10px #000' }}
+            className=' mt-5 px-5'
+          >
             Hello and welcome, I am Shannon Beelman, Photographer, Writer and
             Artist, thank you for stopping by.
             <br />

@@ -55,7 +55,13 @@ const Navigation = (props) => {
             className='d-flex justify-content-between'
             style={{ width: '100%' }}
           >
-            <div style={{ display: 'flex', marginTop: '15px' }}>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                marginTop: '15px',
+              }}
+            >
               <NavDropdown
                 className='mx-2'
                 title='Portfolio'
@@ -87,7 +93,7 @@ const Navigation = (props) => {
                 <Nav.Link className='mx-2'>Biography</Nav.Link>
               </LinkContainer>
             </div>
-            <div className='d-flex'>
+            <div className='d-flex text-center justify-content-center mb-4'>
               <a
                 className='mt-3'
                 href='https://www.facebook.com/ShannonBeelmanPhotography'
@@ -95,7 +101,7 @@ const Navigation = (props) => {
                 rel='noreferrer'
               >
                 <FaFacebook
-                  className='mx-5'
+                  className='ml-5'
                   style={{ color: '#fff', fontSize: '2em' }}
                 />
               </a>
@@ -117,7 +123,7 @@ const Navigation = (props) => {
                 rel='noreferrer'
               >
                 <FaTwitter
-                  className='mx-5'
+                  className='mr-5'
                   style={{ color: '#fff', fontSize: '2em' }}
                 />
               </a>
